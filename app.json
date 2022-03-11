@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "staysic-mobile",
+    "slug": "staysic-mobile",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
