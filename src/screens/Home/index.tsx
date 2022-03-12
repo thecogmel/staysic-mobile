@@ -12,7 +12,9 @@ const Home: React.FC = () => {
       <Stack space={4} direction="column">
         <Stack space={3} direction="row">
           <Box w={170}>
-            <Button size="lg">Agenda</Button>
+            <Button onPress={() => navigation.navigate("Schedule")} size="lg">
+              Agenda
+            </Button>
           </Box>
           <Box w={170}>
             <Button onPress={() => navigation.navigate("Bio")} size="lg">
@@ -22,7 +24,11 @@ const Home: React.FC = () => {
         </Stack>
         <Stack space={3} direction="row">
           <Box>
-            <Button w={170} size="lg">
+            <Button
+              onPress={() => navigation.navigate("Members")}
+              w={170}
+              size="lg"
+            >
               Integrantes
             </Button>
           </Box>

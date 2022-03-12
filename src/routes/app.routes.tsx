@@ -7,12 +7,15 @@ import { Text } from "native-base";
 import theme from "../global/theme";
 import Bio from "../screens/Bio";
 import Photos from "../screens/Photos";
-import BackButton from "../assets/images/backButton.svg";
+import Schedule from "../screens/Schedule";
+import Members from "../screens/Members";
 
 export type RootStackParamList = {
   Home: undefined;
   Bio: undefined;
   Photos: undefined;
+  Schedule: undefined;
+  Members: undefined;
 };
 
 export type navigationStackProps =
@@ -34,7 +37,6 @@ export function AppRoutes() {
         },
         headerStyle: { backgroundColor: "black" },
         headerBackImageSource: require("../assets/images/backButton(1).png"),
-        /* headerLeft: () => <BackButton />, */
       }}
     >
       <Stack.Screen name="Staysic" component={Home} />
@@ -47,6 +49,16 @@ export function AppRoutes() {
         options={{ title: "Fotos" }}
         name="Photos"
         component={Photos}
+      />
+      <Stack.Screen
+        options={{ title: "Agenda" }}
+        name="Schedule"
+        component={Schedule}
+      />
+      <Stack.Screen
+        options={{ title: "Integrantes" }}
+        name="Members"
+        component={Members}
       />
     </Stack.Navigator>
   );
