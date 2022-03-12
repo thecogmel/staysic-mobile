@@ -7,6 +7,7 @@ import { Text } from "native-base";
 import theme from "../global/theme";
 import Bio from "../screens/Bio";
 import Photos from "../screens/Photos";
+import BackButton from "../assets/images/backButton.svg";
 
 export type RootStackParamList = {
   Home: undefined;
@@ -23,7 +24,7 @@ export function AppRoutes() {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerBackTitleVisible: true,
+        headerBackTitleVisible: false,
         headerTintColor: `${theme.colors.primary[500]}`,
         headerTitleAlign: "center",
         headerTitle: "Staysic",
@@ -32,6 +33,8 @@ export function AppRoutes() {
           fontSize: 32,
         },
         headerStyle: { backgroundColor: "black" },
+        headerBackImageSource: require("../assets/images/backButton(1).png"),
+        /* headerLeft: () => <BackButton />, */
       }}
     >
       <Stack.Screen name="Staysic" component={Home} />
