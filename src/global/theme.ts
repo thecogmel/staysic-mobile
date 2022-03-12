@@ -59,5 +59,10 @@ export default {
         },
       },
     },
+    Divider: {
+      baseStyle: {
+        bg: "primary.800",
+      },
+    },
   },
 };
