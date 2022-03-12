@@ -4,9 +4,16 @@ import { ContainerCenter } from "./styles";
 import { Entypo } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { navigationStackProps } from "../../routes/app.routes";
+import { Linking } from "react-native";
+import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 
 const Home: React.FC = () => {
   const navigation = useNavigation<navigationStackProps>();
+  const openURL = (url: string) => {
+    Linking.openURL(url).catch((err) =>
+      console.error("An error occurred", err)
+    );
+  };
   return (
     <ContainerCenter>
       <Stack space={4} direction="column">
@@ -43,9 +50,21 @@ const Home: React.FC = () => {
           </Box>
         </Stack>
         <Stack mt={8} space={8} justifyContent="center" direction="row">
-          <Entypo name="facebook-with-circle" size={60} color="red" />
-          <Entypo name="mail-with-circle" size={60} color="red" />
-          <Entypo name="instagram-with-circle" size={60} color="red" />
+          <TouchableWithoutFeedback
+            onPress={() => openURL("https://www.facebook.com/bandastaysic")}
+          >
+            <Entypo name="facebook-with-circle" size={60} color="red" />
+          </TouchableWithoutFeedback>
+          <TouchableWithoutFeedback
+            onPress={() => openURL("https://www.instagram.com/staysic_/")}
+          >
+            <Entypo name="mail-with-circle" size={60} color="red" />
+          </TouchableWithoutFeedback>
+          <TouchableWithoutFeedback
+            onPress={() => openURL("https://www.instagram.com/staysic_/")}
+          >
+            <Entypo name="instagram-with-circle" size={60} color="red" />
+          </TouchableWithoutFeedback>
         </Stack>
       </Stack>
     </ContainerCenter>
