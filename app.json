@@ -3,8 +3,8 @@
     "name": "staysic-mobile",
     "slug": "staysic-mobile",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "assetBundlePatterns": ["**/*"],
+    "backgroundColor": "#000000",
+    "primaryColor": "#b30000"
   }
 }
